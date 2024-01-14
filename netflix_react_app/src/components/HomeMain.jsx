@@ -14,33 +14,16 @@ class HomeMain extends Component {
           <div className="d-flex">
             <h2 className="mb-4 me-3">TV Shows</h2>
             <div className="dropdown ml-4 mt-1">
-              <button
-                className="btn btn-secondary btn-sm dropdown-toggle rounded-0"
-                type="button"
-                id="dropdownMenuButton"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                style={{ backgroundColor: "#221f1f" }}
-              >
-                Genres &nbsp;
-              </button>
-              <div
-                className="dropdown-menu bg-dark"
-                aria-labelledby="dropdownMenuButton"
-              >
-                <a className="dropdown-item text-white bg-dark" href="#">
-                  Comedy
-                </a>
-                <a className="dropdown-item text-white bg-dark" href="#">
-                  Drama
-                </a>
-                <a className="dropdown-item text-white bg-dark" href="#">
-                  Thriller
-                </a>
-              </div>
-
-              
+              <Dropdown>
+                <Dropdown.Toggle variant="dark" className="rounded-0 pe-4">
+                  Genres &nbsp;
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item>Comedy</Dropdown.Item>
+                  <Dropdown.Item>Drama</Dropdown.Item>
+                  <Dropdown.Item>Thriller</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
           </div>
           <div>
@@ -60,3 +43,15 @@ class HomeMain extends Component {
 }
 
 export default HomeMain;
+
+/*
+<button
+                className="btn btn-secondary btn-sm dropdown-toggle rounded-0"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style={{ backgroundColor: "#221f1f" }}
+              ></button> 
+*/
